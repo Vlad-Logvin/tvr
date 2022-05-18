@@ -4,7 +4,8 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private CharacterController characterController;
-    public float movementSpeed = 3f;
+    private CharacterAnimations playerAnimations;
+    public float movementSpeed = 5f;
     public float gravity = 9.8f;
     public float rotationSpeed = 0.15f;
     public float rotateDegreesPerSecond = 120f;
@@ -12,12 +13,14 @@ public class PlayerMove : MonoBehaviour
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        playerAnimations = GetComponent<CharacterAnimations>();
     }
 
     void Update()
     {
         Move();
         Rotate();
+        AnimateWalk();
     }
 
     void Move()
@@ -33,6 +36,10 @@ public class PlayerMove : MonoBehaviour
             Vector3 moveDirection = -transform.forward;
             moveDirection.y -= gravity * Time.deltaTime;
             characterController.Move(moveDirection * (movementSpeed * Time.deltaTime));
+        }
+        else
+        {
+            characterController.Move(Vector3.zero);
         }
     }
 
@@ -54,5 +61,10 @@ public class PlayerMove : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation,
                 Quaternion.LookRotation(rotationDirection), rotateDegreesPerSecond * Time.deltaTime);
         }
+    }
+
+    void AnimateWalk()
+    {
+        playerAnimations.Walk(characterController.velocity.sqrMagnitude != 0);
     }
 }
