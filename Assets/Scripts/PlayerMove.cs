@@ -5,7 +5,7 @@ public class PlayerMove : MonoBehaviour
 {
     private CharacterController characterController;
     private CharacterAnimations playerAnimations;
-    public float movementSpeed = 5f;
+    public float speed = 5f;
     public float gravity = 9.8f;
     public float rotationSpeed = 0.15f;
     public float rotateDegreesPerSecond = 120f;
@@ -29,13 +29,13 @@ public class PlayerMove : MonoBehaviour
         {
             Vector3 moveDirection = transform.forward;
             moveDirection.y -= gravity * Time.deltaTime;
-            characterController.Move(moveDirection * (movementSpeed * Time.deltaTime));
+            characterController.Move(moveDirection * (speed * Time.deltaTime));
         }
         else if (Input.GetAxis(Axis.VERTICAL_AXIS) < 0)
         {
             Vector3 moveDirection = -transform.forward;
             moveDirection.y -= gravity * Time.deltaTime;
-            characterController.Move(moveDirection * (movementSpeed * Time.deltaTime));
+            characterController.Move(moveDirection * (speed * Time.deltaTime));
         }
         else
         {

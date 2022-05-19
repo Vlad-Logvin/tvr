@@ -20,7 +20,37 @@ public class PlayerAttackInput : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.J))
         {
+            playerAnimation.UnfreezeAnimation();
             playerAnimation.Defend(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            playerAnimation.Dance1();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            playerAnimation.Dance2();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            playerAnimation.Dance3();
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            playerAnimation.Dance4();
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            playerAnimation.Dance5();
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            playerAnimation.Dance6();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            playerAnimation.Dance7();
         }
 
         if (Input.GetKeyDown(KeyCode.K))
