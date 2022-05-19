@@ -9,12 +9,14 @@ public class HealthScript : MonoBehaviour
     private CharacterAnimations animation;
     public bool isPlayer;
     [SerializeField] private Image healthUI;
+    private CharacterSoundFX sound;
 
     [HideInInspector] public bool shieldActivated;
 
     private void Awake()
     {
         animation = GetComponent<CharacterAnimations>();
+        sound = GetComponentInChildren<CharacterSoundFX>();
     }
 
     public void ApplyDamage(float damage)
@@ -41,6 +43,7 @@ public class HealthScript : MonoBehaviour
         if (playerDied)
         {
             animation.Die(true);
+            sound.Die();
             GetComponent<CharacterAnimations>().enabled = false;
             if (isPlayer)
             {
@@ -48,6 +51,7 @@ public class HealthScript : MonoBehaviour
                 GetComponent<PlayerAttackInput>().enabled = false;
                 GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG).GetComponent<EnemyController>().enabled = false;
                 GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG).GetComponent<CharacterAnimations>().Win();
+                GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG).GetComponentInChildren<CharacterSoundFX>().Victory();
                 GameObject.FindGameObjectWithTag(Tags.PLAYER_BIP_TAG).GetComponent<CharacterController>().enabled =
                     false;
             }
@@ -57,6 +61,7 @@ public class HealthScript : MonoBehaviour
                 GetComponent<EnemyController>().enabled = false;
                 GetComponent<NavMeshAgent>().enabled = false;
                 GameObject.FindGameObjectWithTag(Tags.PLAYER_TAG).GetComponent<CharacterAnimations>().Win();
+                GameObject.FindGameObjectWithTag(Tags.PLAYER_TAG).GetComponentInChildren<CharacterSoundFX>().Victory();
                 GameObject.FindGameObjectWithTag(Tags.ENEMY_BIP_TAG).GetComponent<CharacterController>().enabled =
                     false;
             }

@@ -11759,7 +11759,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dffe9090fe761f543b94811d63a4b6b3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12584,6 +12584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b666d1d29d2144469bb7a880bcaa747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSound1: {fileID: 8300000, guid: 0e466d74b338a0e4b9e357189c74433a, type: 3}
+  attackSound2: {fileID: 8300000, guid: 23c48b90dc1b7b44b901492bce31c4d3, type: 3}
+  dieSound: {fileID: 8300000, guid: c62e50664ccc6ed408f327665691352e, type: 3}
+  danceSound: {fileID: 8300000, guid: 6cee6b7321c87d546955631de3dd599b, type: 3}
+  victorySound: {fileID: 8300000, guid: e36a481f1ee82844986e8a1ca18ef1dc, type: 3}
+  defenceSound: {fileID: 8300000, guid: cf6eb6118a40bb344ab49d2cc23df05f, type: 3}
 --- !u!1001 &1576469758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12912,6 +12918,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b666d1d29d2144469bb7a880bcaa747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSound1: {fileID: 8300000, guid: 72aa43070a64d8448945512f98552f27, type: 3}
+  attackSound2: {fileID: 8300000, guid: 85f6207ce85587140b445757f0a3eae1, type: 3}
+  dieSound: {fileID: 8300000, guid: 3fc92d5c611d51141891a292e715bb83, type: 3}
+  danceSound: {fileID: 8300000, guid: 6cee6b7321c87d546955631de3dd599b, type: 3}
+  victorySound: {fileID: 8300000, guid: 7da58e398fd30044e814c665ee2c287b, type: 3}
+  defenceSound: {fileID: 8300000, guid: cf6eb6118a40bb344ab49d2cc23df05f, type: 3}
 --- !u!1001 &1590289893
 PrefabInstance:
   m_ObjectHideFlags: 0

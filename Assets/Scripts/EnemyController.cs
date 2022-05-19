@@ -19,12 +19,14 @@ public class EnemyController : MonoBehaviour
     private float attackTimer;
     private EnemyState enemyState;
     public GameObject attackPoint;
+    private CharacterSoundFX sound;
 
     void Awake()
     {
         enemyAnimation = GetComponent<CharacterAnimations>();
         agent = GetComponent<NavMeshAgent>();
         playerTarget = GameObject.FindGameObjectWithTag(Tags.PLAYER_TAG).transform;
+        sound = GetComponentInChildren<CharacterSoundFX>();
     }
 
     private void Start()
@@ -76,10 +78,12 @@ public class EnemyController : MonoBehaviour
         {
             if (Random.Range(0, 2) > 0)
             {
+                sound.Attack1();
                 enemyAnimation.Attack1();
             }
             else
             {
+                sound.Attack2();
                 enemyAnimation.Attack2();
             }
 
