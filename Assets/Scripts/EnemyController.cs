@@ -1,7 +1,5 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
-using Random = UnityEngine.Random;
 
 public enum EnemyState
 {
@@ -20,6 +18,7 @@ public class EnemyController : MonoBehaviour
     private float waitBeforeAttackTime = 3f;
     private float attackTimer;
     private EnemyState enemyState;
+    public GameObject attackPoint;
 
     void Awake()
     {
@@ -92,6 +91,20 @@ public class EnemyController : MonoBehaviour
         {
             agent.isStopped = false;
             enemyState = EnemyState.CHASE;
+        }
+    }
+
+
+    void ActivateAttackPoint()
+    {
+        attackPoint.SetActive(true);
+    }
+
+    void DeactivateAttackPoint()
+    {
+        if (attackPoint.activeInHierarchy)
+        {
+            attackPoint.SetActive(false);
         }
     }
 }
