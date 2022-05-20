@@ -27804,14 +27804,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.5
-    functionName: ActivateAttackPoint
+    functionName: ActivateAttackPointSword
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 6c1741da7bfbae84e81d394370d90695, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.6
-    functionName: DeactivateAttackPoint
+    functionName: DeactivateAttackPointSword
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 6c1741da7bfbae84e81d394370d90695, type: 3}
     floatParameter: 0

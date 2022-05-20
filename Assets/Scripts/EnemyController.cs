@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     private float waitBeforeAttackTime = 3f;
     private float attackTimer;
     private EnemyState enemyState;
-    public GameObject attackPoint;
+    public GameObject attackPointSword;
     private CharacterSoundFX sound;
 
     void Awake()
@@ -98,17 +98,16 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-
-    void ActivateAttackPoint()
+    void ActivateAttackPointSword()
     {
-        attackPoint.SetActive(true);
+        attackPointSword.SetActive(true);
     }
 
-    void DeactivateAttackPoint()
+    void DeactivateAttackPointSword()
     {
-        if (attackPoint.activeInHierarchy)
+        if (attackPointSword.activeInHierarchy)
         {
-            attackPoint.SetActive(false);
+            attackPointSword.SetActive(false);
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAttackInput : MonoBehaviour
 {
     private CharacterAnimations playerAnimation;
-    public GameObject attackPoint;
+    public GameObject attackPointSword, attackPointHand, attackPointLeg;
     private PlayerShield shield;
     private CharacterSoundFX sound;
 
@@ -83,18 +83,68 @@ public class PlayerAttackInput : MonoBehaviour
             sound.Attack2();
             playerAnimation.Attack2();
         }
-    }
 
-    void ActivateAttackPoint()
-    {
-        attackPoint.SetActive(true);
-    }
-
-    void DeactivateAttackPoint()
-    {
-        if (attackPoint.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            attackPoint.SetActive(false);
+            sound.LeftHandAttack();
+            playerAnimation.LeftHandAttack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            sound.LegAttack();
+            playerAnimation.LegAttack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            sound.LegSweepAttack();
+            playerAnimation.LegSweepAttack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            sound.LeftSwiping();
+            playerAnimation.LeftSwiping();
+        }
+    }
+
+    void ActivateAttackPointSword()
+    {
+        attackPointSword.SetActive(true);
+    }
+
+    void DeactivateAttackPointSword()
+    {
+        if (attackPointSword.activeInHierarchy)
+        {
+            attackPointSword.SetActive(false);
+        }
+    }
+
+    void ActivateAttackPointLeg()
+    {
+        attackPointLeg.SetActive(true);
+    }
+
+    void DeactivateAttackPointLeg()
+    {
+        if (attackPointLeg.activeInHierarchy)
+        {
+            attackPointLeg.SetActive(false);
+        }
+    }
+
+    void ActivateAttackPointHand()
+    {
+        attackPointHand.SetActive(true);
+    }
+
+    void DeactivateAttackPointHand()
+    {
+        if (attackPointHand.activeInHierarchy)
+        {
+            attackPointHand.SetActive(false);
         }
     }
 }

@@ -64,6 +64,22 @@ public class CharacterAnimations : MonoBehaviour
         animator.SetTrigger(AnimationTags.ATTACK_TRIGGER_2);
     }
 
+    public void LeftHandAttack()
+    {
+        animator.SetTrigger(AnimationTags.LEFT_HAND_ATTACK_TRIGGER);
+    }
+    public void LegAttack()
+    {
+        animator.SetTrigger(AnimationTags.LEG_ATTACK_TRIGGER);
+    }
+    public void LegSweepAttack()
+    {
+        animator.SetTrigger(AnimationTags.LEG_SWEEP_TRIGGER);
+    }  
+    public void LeftSwiping()
+    {
+        animator.SetTrigger(AnimationTags.LEFT_SWIPING_TRIGGER);
+    }
     public void Die(bool die)
     {
         animator.SetBool(AnimationTags.DEATH_PARAMETER, die);
@@ -83,8 +99,5 @@ public class CharacterAnimations : MonoBehaviour
     {
         animator.speed = 1f;
     }
-
-    void Update()
-    {
-    }
+    
 }

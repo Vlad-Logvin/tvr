@@ -20,6 +20,10 @@ public class AnimationTags
     public const string VICTORY_PARAMETER = "Victory";
     public const string ATTACK_TRIGGER_1 = "Attack1";
     public const string ATTACK_TRIGGER_2 = "Attack2";
+    public const string LEFT_HAND_ATTACK_TRIGGER = "LeftHandPunch";
+    public const string LEG_ATTACK_TRIGGER = "LegAttack";
+    public const string LEG_SWEEP_TRIGGER = "LegSweep";
+    public const string LEFT_SWIPING_TRIGGER = "LeftSwiping";
     public const string DANCE_TRIGGER_1 = "Dance1";
     public const string DANCE_TRIGGER_2 = "Dance2";
     public const string DANCE_TRIGGER_3 = "Dance3";
