@@ -5,7 +5,7 @@ public class PlayerMove : MonoBehaviour
     private CharacterController characterController;
     private CharacterAnimations playerAnimations;
     public float speed = 5f;
-    public float gravity = 9.8f;
+    public float gravity = 98f;
     public float rotationSpeed = 0.15f;
     public float rotateDegreesPerSecond = 120f;
 
