@@ -39141,7 +39141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1323098969, guid: b0a4397f31d14114a9c4ce19eb5957db, type: 3}
       propertyPath: damage
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1323098969, guid: b0a4397f31d14114a9c4ce19eb5957db, type: 3}
       propertyPath: layer.m_Bits

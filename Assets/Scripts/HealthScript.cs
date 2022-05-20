@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
@@ -54,6 +56,7 @@ public class HealthScript : MonoBehaviour
                 GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG).GetComponentInChildren<CharacterSoundFX>().Victory();
                 GameObject.FindGameObjectWithTag(Tags.PLAYER_BIP_TAG).GetComponent<CharacterController>().enabled =
                     false;
+                StartCoroutine(DieCoroutine());
             }
             else
             {
@@ -68,5 +71,11 @@ public class HealthScript : MonoBehaviour
 
             playerDied = false;
         }
+    }
+    
+    IEnumerator DieCoroutine()
+    {        
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Scenes/Lose");
     }
 }
