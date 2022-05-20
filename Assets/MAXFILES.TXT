@@ -1,0 +1,8 @@
+﻿D:\3d studio\Scenes\Kassa\t$m$p$$$\Cash Register B05.max
+D:\3d studio\Scenes\Kassa\t$m$p$$$\MAXFILES.TXT
+D:\Program Files\Autodesk\3ds Max Design 2017\3ds Max 2017\Maps\glare\glare_streaks_star_camera_filter.tif
+C:\Program Files (x86)\Common Files\Autodesk Shared\Materials\Textures\3\Mats\Woods & Plastics.Finish Carpentry.Wood.Mahogany.png
+D:\3d studio\Scenes\Kassa\Teller90.png
+D:\3d studio\Scenes\Kassa\National.png
+D:\3d studio\maps\Wood\ASHSEN_2.gif
+C:\Program Files (x86)\Common Files\Autodesk Shared\Materials\Textures\3\Mats\Woods & Plastics.Finish Carpentry.Wood.Teak.png
